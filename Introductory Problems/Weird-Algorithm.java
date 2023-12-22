@@ -1,27 +1,21 @@
 import java.util.Scanner;
-
+ 
 class Main{
-    public static long BS(int[] arr)
-    {
-        int n = arr.length;
-        long sum = ((n+1)*(n+2))/2;
-        for(int i=0;i<arr.length;i++)
-        {
-            sum-=arr[i];
-
-        }
-        return sum;
-
-    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        n = n-1;
-        int[] arr = new int[n];
-        for(int i=0;i<arr.length;i++)
+        long n = sc.nextLong();
+        while(n!=1)
         {
-            arr[i] = sc.nextInt();
+            System.out.print(n+" ");
+            if(n%2==0)
+            {
+                n=n/2;
+            }
+            else{
+                n = n*3;
+                n+=1;
+            }
         }
-        System.out.println(BS(arr));
+        System.out.print(1);
     }
 }
