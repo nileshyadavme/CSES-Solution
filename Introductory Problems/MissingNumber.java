@@ -12,6 +12,7 @@ class MissingNumber{
             arr[i] = sc.nextInt();
             sum+=arr[i];
         }
+        sc.close();
         if(tSum-sum>Long.MAX_VALUE)
         {
             
